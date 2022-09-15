@@ -4,6 +4,7 @@
  */
 package com.ceva.app.mikado;
 
+import com.ceva.app.mikado.db.FileDB;
 import com.ceva.app.mikado.ui.App;
 import com.ceva.app.mikado.ui.ApplicationException;
 
@@ -11,9 +12,8 @@ public class Launcher {
 
 	public static void main(String[] argv) {
 			try {
-				App.setStorageFile(argv[0]);
 				App app = new App();
-				app.launch();
+				app.launch(new FileDB(argv[0]));
 			} catch (ApplicationException e) {
 				System.err.println("Could not start application");
 				e.printStackTrace();

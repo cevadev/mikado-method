@@ -15,12 +15,13 @@ import java.util.Map;
 
 public class FileDB implements Database {
 
-	private File file;
+	private final File file;
         
         public FileDB(String storageFile){
             this.file = new File(storageFile);
         }
 
+        @Override
 	public List<String> load(String key) {
 		try {
 			ObjectInputStream stream = new ObjectInputStream(new FileInputStream(file));
@@ -31,6 +32,7 @@ public class FileDB implements Database {
 		}
 	}
 	
+        @Override
 	public void store(Map<String, Serializable> data) {
 		try {
 			FileOutputStream out = new FileOutputStream(file);
