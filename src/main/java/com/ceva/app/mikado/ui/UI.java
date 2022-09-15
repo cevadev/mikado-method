@@ -4,6 +4,7 @@
  */
 package com.ceva.app.mikado.ui;
 
+import com.ceva.app.mikado.db.Database;
 import com.ceva.app.mikado.db.FileDB;
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
@@ -20,7 +21,7 @@ public class UI {
 
 	
 	private JFrame frame;
-	private FileDB database;
+	private Database database;
 
 	public UI() {
 		frame = new JFrame();

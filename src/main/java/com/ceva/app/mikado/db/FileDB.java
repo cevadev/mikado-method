@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public class FileDB {
+public class FileDB implements Database {
 
 	private File file;
         
