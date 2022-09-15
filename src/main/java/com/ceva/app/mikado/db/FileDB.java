@@ -16,6 +16,10 @@ import java.util.Map;
 public class FileDB {
 
 	private File file;
+        
+        public FileDB(String storageFile){
+            this.file = new File(storageFile);
+        }
 
 	public List<String> load(String key) {
 		try {
@@ -39,8 +43,5 @@ public class FileDB {
 	}
 
 
-	public void setStore(String storageFile) {
-		file = new File(storageFile);		
-	}
 
 }
