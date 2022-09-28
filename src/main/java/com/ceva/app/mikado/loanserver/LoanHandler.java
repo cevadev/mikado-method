@@ -50,7 +50,6 @@ public class LoanHandler extends AbstractHandler{
             } else if (isApproval(request) && idSpecified(request)) {
                 writer.println(approveLoan(request.getParameter(TICKET_ID)));
             } else {
-System.out.println(request);
                 writer.println("Incorrect parameters provided");
             }
         } catch (ApplicationException e) {
