@@ -22,7 +22,7 @@ public class LoanHandlerTest {
     
     @Before
     public void setUp(){
-        loanHandler = new LoanHandler();
+        loanHandler = new LoanHandler(new MemoryLoanRepository());
         baseRequest = new RequestStub();
         response = new ResponseStub();
     }
